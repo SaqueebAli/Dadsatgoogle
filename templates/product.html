@@ -1,0 +1,407 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DADS</title>
+</head>
+{%block searchBar%} {%endblock%} {%block content%}
+<section>
+    {%for i in items|slice:"0:" %}
+    <div class="container-sm col-sm-5 product_page">
+
+        {%if key%}
+        <div class="product-img">
+            <img src="/media/{{i.Grocerries_Image}}" class="float-start" alt="...">
+
+            <br>
+            <br>
+        </div>
+        <div class="caption">
+            <div class="row buttons">
+
+                <button class="btn  col-sm-4 col-sm-offset-2 btn-lg" style="background-color:#ff9f00; color:#fff;font-size:1em;"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;ADD TO CART</button>
+
+
+                <button class="btn col-sm-4 col-sm-offset-1 btn-lg" style="background-color:#fb641b; color:#fff;font-size:1em;"><i class="fa fa-bolt" style="font-size:1.2em;"></i> BUY NOW</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="container-sm col-sm-7 product_descp">
+        <div class="text-center">
+            <h3>{{i.Grocerries_Name}}</h3>
+            <br>
+            <h5 class="shop-name">Pizza, Fast Food, Desserts, Beverages</h5>
+            <h5 class="shop-address">The Rink Mall, Chauk Bazaar, Darjeeling</h5>
+        </div>
+
+        <!-- <div class="row">
+                <div class="col-sm-2">
+                    <span class="label label-success">4.6 <span class="glyphicon glyphicon-star"></span></span>
+                </div>
+
+                <div class="col-sm-5">
+                    <strong>2,421 Ratings & Reviews</strong>
+                </div>
+            </div>-->
+
+        <br><br>
+
+        <div class="row " id="delivery-location">
+            <div class="col-xs-1">
+                <strong>Delivery</strong>
+            </div>
+
+            <div class=" row col-xs-4" style="border:0px;border-bottom:1px solid #2874f0;position:relative; left:10%;">
+                <span class="glyphicon glyphicon-map-marker col-xs-1" style="color:#2874f0;padding-left:0;margin-left:0;"></span>
+                <input type="text" placeholder="734301" style="border:0;padding-right:0;" class="col-xs-7">
+                <a href=" " class="col-xs-1" style="padding-left:0;text-decoration:none;">Change</a>
+            </div>
+
+        </div>
+        <div id="delivery-time" style="position:relative;left:15%;">
+            <h5>Delivery in 3-4 days | <a href="" style="color:green;text-decoration:none;">Free</a></h5>
+        </div>
+
+
+        <table class="table table-hover">
+
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>{{i.Grocerries_Weight}}</td>
+                    <td>Rs {{i.Grocerries_Price}}</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-primary"><i class="fa fa-check"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>10kg</td>
+                    <td>Rs 500</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-primary"><i class="fa fa-check"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>15kg</td>
+                    <td>Rs 1000</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-primary"><i class="fa fa-check"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class="container col-xs-12" style="margin-top:50px;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h3 class="text-muted">PRODUCT DESCRIPTION</h3>
+                    <p>Aashirvaad Whole Wheat Atta is made using the 4-step advantage process which helps to retain its natural dietary fibers and nutrients. Sourced directly from the farmers, showered with just the right amount of rain and sun-kissed to
+                        perfection the grains are heavy on the palm and amber in colour. These expertly sourced grains undergo mechanized packaging that ensures zero human contact and 100% safety.
+                        <br> You and your family can lead a fit and healthier lifestyle as you enjoy soft, fluffy and delicious rotis from this natural protein-rich whole wheat atta. The dough made from Aashirvaad Whole Wheat Atta absorbs more water making
+                        the Rotis soft, fluffy and delicious which helps you power through the day.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-xs-12" style="margin-top:50px;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h2 class="text-muted">Customer Reviews</h2>
+                    <br>
+                    <div class="d-flex flex-column-reverse bd-highlight">
+                        <div class="p-2 bd-highlight">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight">
+                                    <h4 class="customer-name"> santosh kumar</h4>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <h5 class="customer-opinion">I have been using Ashirwad Aata since years and this pack of aata is turning into whiter chapati then brown ...I feel there is a mix of other aata in it</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="p-2 bd-highlight">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight">
+                                    <h4 class="customer-name"> santosh kumar</h4>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <h5 class="customer-opinion">I have been using Ashirwad Aata since years and this pack of aata is turning into whiter chapati then brown ...I feel there is a mix of other aata in it</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="p-2 bd-highlight">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight">
+                                    <h4 class="customer-name"> santosh kumar</h4>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <h5 class="customer-opinion">I have been using Ashirwad Aata since years and this pack of aata is turning into whiter chapati then brown ...I feel there is a mix of other aata in it</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%else%}
+    <div class="product-img">
+        <img src="/media/{{i.Meals_Image}}" class="float-start" alt="...">
+
+        <br>
+        <br>
+    </div>
+    <div class="caption">
+        <div class="row buttons">
+
+            <button class="btn  col-sm-4 col-sm-offset-2 btn-lg" style="background-color:#ff9f00; color:#fff;font-size:1em;"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;ADD TO CART</button>
+
+
+            <button class="btn col-sm-4 col-sm-offset-1 btn-lg" style="background-color:#fb641b; color:#fff;font-size:1em;"><i class="fa fa-bolt" style="font-size:1.2em;"></i> BUY NOW</button>
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <div class="container-sm col-sm-7 product_descp">
+        <div class="text-center">
+            <h3>{{i.Meals_Name}}</h3>
+            <br>
+            <h5 class="shop-name">Pizza, Fast Food, Desserts, Beverages</h5>
+            <h5 class="shop-address">The Rink Mall, Chauk Bazaar, Darjeeling</h5>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-sm-2">
+                <span class="label label-success">4.6 <span class="glyphicon glyphicon-star"></span></span>
+            </div>
+
+            <div class="col-sm-5">
+                <strong>2,421 Ratings & Reviews</strong>
+            </div>
+        </div>-->
+
+        <br><br>
+
+        <div class="row " id="delivery-location">
+            <div class="col-xs-1">
+                <strong>Delivery</strong>
+            </div>
+
+            <div class=" row col-xs-4" style="border:0px;border-bottom:1px solid #2874f0;position:relative; left:10%;">
+                <span class="glyphicon glyphicon-map-marker col-xs-1" style="color:#2874f0;padding-left:0;margin-left:0;"></span>
+                <input type="text" placeholder="734301" style="border:0;padding-right:0;" class="col-xs-7">
+                <a href=" " class="col-xs-1" style="padding-left:0;text-decoration:none;">Change</a>
+            </div>
+
+        </div>
+        <div id="delivery-time" style="position:relative;left:15%;">
+            <h5>Delivery in 3-4 days | <a href="" style="color:green;text-decoration:none;">Free</a></h5>
+        </div>
+
+
+        <table class="table table-hover">
+
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>{{i.Meals_quantity}}</td>
+                    <td>Rs {{i.Meals_Price}}</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-primary"><i class="fa fa-check"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>10kg</td>
+                    <td>Rs 500</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-primary"><i class="fa fa-check"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>15kg</td>
+                    <td>Rs 1000</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-primary"><i class="fa fa-check"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class="container col-xs-12" style="margin-top:50px;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h3 class="text-muted">PRODUCT DESCRIPTION</h3>
+                    <p>Aashirvaad Whole Wheat Atta is made using the 4-step advantage process which helps to retain its natural dietary fibers and nutrients. Sourced directly from the farmers, showered with just the right amount of rain and sun-kissed to
+                        perfection the grains are heavy on the palm and amber in colour. These expertly sourced grains undergo mechanized packaging that ensures zero human contact and 100% safety.
+                        <br> You and your family can lead a fit and healthier lifestyle as you enjoy soft, fluffy and delicious rotis from this natural protein-rich whole wheat atta. The dough made from Aashirvaad Whole Wheat Atta absorbs more water making
+                        the Rotis soft, fluffy and delicious which helps you power through the day.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-xs-12" style="margin-top:50px;">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h2 class="text-muted">Customer Reviews</h2>
+                    <br>
+                    <div class="d-flex flex-column-reverse bd-highlight">
+                        <div class="p-2 bd-highlight">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight">
+                                    <h4 class="customer-name"> santosh kumar</h4>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <h5 class="customer-opinion">I have been using Ashirwad Aata since years and this pack of aata is turning into whiter chapati then brown ...I feel there is a mix of other aata in it</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="p-2 bd-highlight">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight">
+                                    <h4 class="customer-name"> santosh kumar</h4>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <h5 class="customer-opinion">I have been using Ashirwad Aata since years and this pack of aata is turning into whiter chapati then brown ...I feel there is a mix of other aata in it</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="p-2 bd-highlight">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight">
+                                    <h4 class="customer-name"> santosh kumar</h4>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <h5 class="customer-opinion">I have been using Ashirwad Aata since years and this pack of aata is turning into whiter chapati then brown ...I feel there is a mix of other aata in it</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endif%} {%endfor%}
+</section>
+{%endblock%}
+<!-- FOOTER -->
+{%block footer%}
+<footer class="page-footer container-fluid col-sm-12">
+
+
+    <div class="container-fluid col-lg-10 col-lg-offset-1">
+        <div class="row">
+
+            <table class="table table-hover">
+
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>
+                            <div class="col-sm-4">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                <h3 class="text-center">&nbsp;TRACK YOUR ORDER</h3>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-sm-4">
+                                <span class="glyphicon glyphicon-refresh"></span>
+                                <h3 class="text-center">&nbsp;&nbsp;FREE & EASY RETURNS</h3>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-sm-4">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <h3 class="text-center">ONLINE CANCELLATIONS</h3>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <br>
+
+
+    <div class="container-fluid" style="position:relative;top:6em;margin-bottom:20px;">
+
+        <div class="col-sm-5">
+
+            <h5 style="font-size:0.95em;">Policies: <a href="" style="text-decoration:none;"> Return Policy </a>|<a href="" style="text-decoration:none;"> Terms of use </a>|<a href="" style="text-decoration:none;"> Security </a>|<a href="" style="text-decoration:none;"> Privacy </a>|
+                <a href="" style="text-decoration:none;"> Infringement</a>
+            </h5>
+
+        </div>
+
+        <div class="col-sm-3">
+            <h5 style="font-size:0.95em;">&copy; DaDs</h5>
+        </div>
+
+        <div class="col-sm-4 row contact">
+            <h5 class="col-sm-5" style="font-size:0.95em;">Keep in touch</h5>
+            <div class="col-sm-7">
+                <button class="btn btn-default" style="border-radius:50%;width:40px;height:40px;"><i class="fa fa-facebook-f"></i></button>
+
+                <button class="btn btn-default" style="border-radius:50%;width:40px;height:40px;"><i class="fa fa-twitter"></i></button>
+
+                <button class="btn btn-default" style="border-radius:50%;width:40px;height:40px;"><i class="fa fa-google"></i></button>
+
+                <button class="btn btn-default" style="border-radius:50%;width:40px;height:40px;"><i class="fa fa-youtube"></i></button>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+</footer>
+{%endblock%}

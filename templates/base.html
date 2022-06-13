@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+{%block head%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+
+
+
+    <title>DADS</title>
+</head>
+{%endblock%}
+
+<body>
+
+    <nav class="fixed-top">
+        {%block nav%}
+
+        <div class="containerl">
+
+            <div class="animate logo">
+                <i><span>D</span><span>a</span><span>D</span><span>s</span></i>
+
+            </div>
+
+        </div>
+
+
+        <button id="burger" class="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/orderMeals">Order Meals</a>
+            </li>
+            <li>
+                <a href="/buyGrocerries">Buy Groceries</a>
+            </li>
+            <li>
+                <a href="#aboutus">About Us</a>
+            </li>
+            <li>
+                <a href="#footer1">Contact Us</a>
+            </li>
+        </ul>
+        <ul>
+
+
+            <li>
+                <a href="#" data-bs-toggle="modal" id="popcart" data-bs-target="cart"><span class="glyphicon glyphicon-shopping-cart"><span id="cart">Cart<b id="count">0</b></span></a>
+            </li>
+            <br>
+
+            <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+            </li>
+            <br>
+            <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#myModal2"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            </li>
+        </ul>
+
+        {%endblock%} {%block searchBar%}
+        <div id="cover">
+            <form method="get" action="{% block action %} {% endblock %}/search/">
+                <div class="tb">
+                    <div class="td"><input type="text" id="search" name="search" placeholder="WHAT ARE YOU LOOKING FOR ?" required></div>
+                    <div class="td" id="s-cover">
+                        <button type="submit">
+        <div id="s-circle"></div>
+        <span></span>
+      </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- <button type="button" id="popcart" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-html="true">
+                <h1>
+                    Cart
+                </h1> (<span id= "data-id"></span>)
+     </button> -->
+
+
+
+
+        </div>
+        {%endblock%}
+
+
+    </nav>
+
+
+
+
+
+
+    {%block content%} {%endblock%} {%block footer%}
+    <section id="aboutus">
+
+        <h4><strong>ABOUT US</strong></h4>
+        <div>
+            <p> We pride ourselves on the service we provide to each and every one of our clients, offering a personal service on a global scale. Customer relationships are key to a sustainable business whereby trust and transparency are at the forefront
+                of everything we do. <br> The DaDs concept proffers a practical solution to shopping and delivery constraints. We aim to build a flexible, responsive and prompt community that ensures your shopping and delivery needs are met on time.</p>
+        </div>
+        <hr>
+        <h2 class="text-center display-3">Reason to shop with us</h2>
+
+        <div class="cards text-center">
+            <div class="card12">
+                <i class="fas fa-truck-loading"></i>
+                <h5>DELIVERY OR COLLECTION</h5>
+                <p>7 days a week, at a time that best suits you</p>
+            </div>
+            <div class="card12">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h5>HANDLED WITH CARE</h5>
+                <p>Great quality products and foods and packed with care</p>
+            </div>
+            <div class="card12">
+                <i class="fas fa-shopping-cart"></i>
+                <h5>FRESHNESS GUARANTEE</h5>
+                <p>We pick only the freshest items</p>
+            </div>
+            <div class="card12">
+                <i class="fas fa-thumbs-up"></i>
+                <h5>FAVOURITES</h5>
+                <p>Order your most favourites in just few seconds</p>
+            </div>
+            <div class="card12">
+                <i class="fas fa-id-card-alt"></i>
+                <h5>MEMBER-CARD POINTS</h5>
+                <p>Collect points to benefit the most</p>
+            </div>
+            <div class="card12"> <i class="fas fa-mobile-alt"></i>
+                <h5>SHOP ON MOVE</h5>
+                <p>Shop on the move just log into our site and order </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer1">
+        <div class="cards">
+            <div class="card12">
+                <div class="containerl">
+
+                    <div class="animate logo">
+                        <i><span>D</span><span>a</span><span>D</span><span>s</span></i>
+
+                    </div>
+
+                </div>
+
+                <h5>CONTACT US</h5>
+                <address>
+            
+            MAIL US AT <a class="bg-success" href="mailto:DaDs@somedomain.com">
+                <i>DaDs</i></a>
+                <br>
+            <a href="tel:+917602640011"><i class="fa fa-phone-square" aria-hidden="true"></i>+91-760-264-0011</a>
+                        
+        </address>
+            </div>
+        </div>
+    </footer>
+    {%endblock%}
+
+
+    <script src="/static/js/index.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script>
+        console.log('working')
+        if (localStorage.getItem('cart') == null) {
+            var cart = {};
+        } else {
+            cart = JSON.parse(localStorage.getItem('cart'));
+            document.getElementById('count').innerHTML = Object.keys(cart).length;
+        }
+
+        $('.cart').click(function() {
+            console.log('clicked');
+            var idstr = this.id.toString();
+            console.log(idstr);
+            if (cart[idstr] != undefined) {
+                cart[idstr] = cart[idstr] + 1;
+            } else {
+                cart[idstr] = 1;
+            }
+            console.log(cart);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            document.getElementById('count').innerHTML = Object.keys(cart).length;
+        });
+        $('#popcart').popover();
+        document.getElementById("popcart").setAttribute('data-id', '<h5>Cart</h5>');
+    </script>
+
+</body>
+
+</html>
